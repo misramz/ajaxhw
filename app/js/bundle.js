@@ -9851,25 +9851,24 @@ var _jquery = require('jquery');
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
-var url = 'http://json-data.herokuapp.com/forms';
-
-var dataReq = _jquery2['default'].getJSON(url);
-
 var myform = (0, _jquery2['default'])('.myForm');
+var url = 'http://json-data.herokuapp.com/forms';
+console.log(url);
+var dataReq = _jquery2['default'].getJSON(url);
 // formArea = $('.forminner');
-
-dataReq.then(function (res) {
-  buildForm(res);
-  console.log(res);
+dataReq.then(function (response) {
+  buildForm(response);
+  console.log(response);
 });
 
 function inputText(obj) {
-  return '\n  <div class="formElement" id="' + obj.id + '">\n    <i class="fa ' + obj.type + '"></i>\n    <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  </div>';
+  return '\n  <div class="formElement" id="' + obj.id + '">\n  <i class="fa ' + obj.icon + '"></i>\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  </div>';
 }
 
 function buildForm(dataArr) {
   dataArr.forEach(function (field) {
-    //  var html = input(field);
+    var html = inputText(field);
+    myform.append(html);
   });
 }
 
