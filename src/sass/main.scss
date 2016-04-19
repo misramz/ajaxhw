@@ -1,0 +1,53 @@
+
+form {
+  text-align: center;
+  height:500px;
+  width:500px;
+}
+.container {
+  height: 400px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 3px;
+
+h1 {
+  background-color: pink;
+  margin: 0px;
+  font: white;
+  text-align: center;
+
+}
+
+
+.myForm {
+  padding: 0px;
+}
+}
+
+.formElement {
+  position: relative;
+
+  input {
+    color: red;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px 5px 3px 25px;
+    width: 420px;
+  }
+i {
+  font-size: 11px;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+}
+nav {
+  background-color: lightpink;
+  margin: 0px;
+  padding: 0px;
+
+}
+.language {
+  width: 400px;
+}
