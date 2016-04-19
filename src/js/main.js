@@ -19,7 +19,13 @@ function inputText (obj) {
 }
 
 
-
+function testArea (obj) {
+  return `
+  <div class="formElement" id="${obj.id}">
+  <i class="fa ${obj.icon}"></i>
+  <textarea placeholder="${obj.label}"</textarea>
+  </div>`;
+}
 
 
 
