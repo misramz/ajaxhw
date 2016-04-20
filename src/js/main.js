@@ -23,9 +23,10 @@ function testArea (obj) {
   return `
   <div class="formElement" id="${obj.id}">
   <i class="fa ${obj.icon}"></i>
-  <textarea placeholder="${obj.label}"</textarea>
-  </div>`;
+  <textarea placeholder = "${obj.label} "</textarea></div>
+  `;
 }
+
 function select (obj) {
 
   var options = '';
@@ -48,7 +49,17 @@ function select (obj) {
 
 function buildForm (dataArr) {
   dataArr.forEach( function (field) {
-     var html = inputText(field);
-     myform.append(html);
+    if(field.type ==="email" || field.type==="tel" || field.type ==="text"){
+      var html = inputText(field);
+      myform.append(html);
+    }else if(field.type==="textarea"){
+      var html = testArea(field);
+      myform.append(html);
+    }
+    else{
+      var html = select(field);
+      myform.append(html);
+    }
+
   });
 }

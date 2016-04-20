@@ -1,19 +1,17 @@
 form {
   text-align: center;
-  height: 500px;
   width: 500px; }
 
-.container {
-  height: 550px;
+.top {
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 3px; }
-  .container h1 {
+  .top h1 {
     background-color: pink;
     margin: 0px;
     font: white;
     text-align: center; }
-  .container .myForm {
+  .top .myForm {
     padding: 0px; }
 
 .formElement {
@@ -29,7 +27,7 @@ form {
     font-size: 11px;
     position: absolute;
     top: 8px;
-    left: 8px;
+    left: 30px;
     color: pink; }
 
 nav {
@@ -39,5 +37,27 @@ nav {
 
 .language {
   width: 400px; }
+
+.container {
+  border: 1px solid black; }
+
+.bottom {
+  text-align: center;
+  background-color: pink;
+  height: 50px; }
+
+.top {
+  margin-bottom: 10px; }
+
+button {
+  margin-top: 10px;
+  font-size: 24px; }
+
+textarea {
+  width: 90%;
+  height: 150px; }
+
+select {
+  width: 90%; }
 
 /*# sourceMappingURL=main.css.map */

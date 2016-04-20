@@ -9866,8 +9866,9 @@ function inputText(obj) {
 }
 
 function testArea(obj) {
-  return '\n  <div class="formElement" id="' + obj.id + '">\n  <i class="fa ' + obj.icon + '"></i>\n  <textarea placeholder="' + obj.label + '"</textarea>\n  </div>';
+  return '\n  <div class="formElement" id="' + obj.id + '">\n  <i class="fa ' + obj.icon + '"></i>\n  <textarea placeholder = "' + obj.label + ' "</textarea></div>\n  ';
 }
+
 function select(obj) {
 
   var options = '';
@@ -9881,8 +9882,16 @@ function select(obj) {
 
 function buildForm(dataArr) {
   dataArr.forEach(function (field) {
-    var html = inputText(field);
-    myform.append(html);
+    if (field.type === "email" || field.type === "tel" || field.type === "text") {
+      var html = inputText(field);
+      myform.append(html);
+    } else if (field.type === "textarea") {
+      var html = testArea(field);
+      myform.append(html);
+    } else {
+      var html = select(field);
+      myform.append(html);
+    }
   });
 }
 
