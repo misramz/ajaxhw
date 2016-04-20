@@ -4,7 +4,7 @@ form {
   width: 500px; }
 
 .container {
-  height: 400px;
+  height: 550px;
   margin: 0 auto;
   border: 1px solid black;
   border-radius: 3px; }
@@ -17,7 +17,8 @@ form {
     padding: 0px; }
 
 .formElement {
-  position: relative; }
+  position: relative;
+  margin-bottom: 15px; }
   .formElement input {
     color: red;
     border: 1px solid black;
@@ -28,7 +29,8 @@ form {
     font-size: 11px;
     position: absolute;
     top: 8px;
-    left: 8px; }
+    left: 8px;
+    color: pink; }
 
 nav {
   background-color: lightpink;

@@ -9865,6 +9865,20 @@ function inputText(obj) {
   return '\n  <div class="formElement" id="' + obj.id + '">\n  <i class="fa ' + obj.icon + '"></i>\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  </div>';
 }
 
+function testArea(obj) {
+  return '\n  <div class="formElement" id="' + obj.id + '">\n  <i class="fa ' + obj.icon + '"></i>\n  <textarea placeholder="' + obj.label + '"</textarea>\n  </div>';
+}
+function select(obj) {
+
+  var options = '';
+
+  obj.options.forEach(function (option) {
+    options += '<option value="' + option.value + '">' + option.label + '</option>';
+  });
+
+  return '\n    <div class="formElement" id="' + obj.id + '">\n      <select>\n        <option>' + obj.label + '</option>\n        ' + options + '\n      </select>\n    </div>\n  ';
+}
+
 function buildForm(dataArr) {
   dataArr.forEach(function (field) {
     var html = inputText(field);

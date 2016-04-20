@@ -26,6 +26,23 @@ function testArea (obj) {
   <textarea placeholder="${obj.label}"</textarea>
   </div>`;
 }
+function select (obj) {
+
+  var options = '';
+
+  obj.options.forEach( function (option) {
+    options += `<option value="${option.value}">${option.label}</option>`;
+  });
+
+  return  `
+    <div class="formElement" id="${obj.id}">
+      <select>
+        <option>${obj.label}</option>
+        ${options}
+      </select>
+    </div>
+  `;
+}
 
 
 
